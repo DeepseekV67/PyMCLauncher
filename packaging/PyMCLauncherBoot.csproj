@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <Platforms>x64</Platforms>
+    <PlatformTarget>x64</PlatformTarget>
+    <AssemblyName>PyMCLauncher</AssemblyName>
+    <RootNamespace>PyMCLauncher</RootNamespace>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <AssemblyTitle>PyMC Launcher</AssemblyTitle>
+    <Product>PyMC Launcher</Product>
+    <Description>Portable lightweight Minecraft launcher</Description>
+    <Company>PyMC</Company>
+    <Version>1.0.0</Version>
+    <FileVersion>1.0.0.0</FileVersion>
+    <LangVersion>7.3</LangVersion>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="build\**" />
+    <None Remove="build\**" />
+    <EmbeddedResource Remove="build\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="build\payload.zip" LogicalName="payload.zip" />
+  </ItemGroup>
+</Project>
