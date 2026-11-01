@@ -23,6 +23,7 @@ packaging/bin/
 # --- 视频 / Node ---
 intro-video/
 *.mp4
+*.srt
 
 # --- 系统 / 编辑器 ---
 Thumbs.db
